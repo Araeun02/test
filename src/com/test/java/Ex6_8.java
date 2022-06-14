@@ -1,4 +1,4 @@
-package com;
+package com.test.java;
 class Data3 { int x;}
 
 public class Ex6_8 {

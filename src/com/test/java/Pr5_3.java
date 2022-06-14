@@ -1,4 +1,4 @@
-package com;
+package com.test.java;
 
 public class Pr5_3 {
 	public static void main(String[] args)

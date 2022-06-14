@@ -1,4 +1,4 @@
-package com;
+package com.test.java;
 
 public class Pr5_1 {
 //1) int[] arr[]; 대괄호가 2개면 꼬일꺼같은데 기본적인 형태 : 타입[] 변수 || 타입 변수[] 

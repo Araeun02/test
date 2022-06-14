@@ -1,4 +1,4 @@
-package com;
+package com.test.java;
 import java.util.Scanner;
 
 public class Pr5_6 {

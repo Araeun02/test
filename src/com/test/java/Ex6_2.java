@@ -1,4 +1,4 @@
-package com;
+package com.test.java;
 
 public class Ex6_2 {
 	public static void main(String[] args) {
