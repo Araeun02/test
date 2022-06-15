@@ -1,3 +1,4 @@
+
 package com.test.java;
 
 class Student {
@@ -11,6 +12,9 @@ class Student {
 	int average;
 	//7 ??
 	student(){}
-	
+		
 	student(string name,)
-} // 설명?
+	} // 설명?
+
+
+}
