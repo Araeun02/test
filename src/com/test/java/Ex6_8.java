@@ -6,7 +6,17 @@ public class Ex6_8 {
 		Data3 d = new Data3();
 		d.x = 10;
 		
-		Data3 d2 = copy(d);
+		/*Data3 d2 = copy(d);
+		System.out.println("d.x ="+d.x);
+		System.out.println("dx.x="+d2.x);
+		d.x = 20;
+		System.out.println(d.x);
+		System.out.println(d2.x);*/
+		
+		Data3 d2 = d;
+		System.out.println("d.x ="+d.x);
+		System.out.println("dx.x="+d2.x);
+		d.x = 50;
 		System.out.println("d.x ="+d.x);
 		System.out.println("dx.x="+d2.x);
 	}

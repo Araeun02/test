@@ -1,6 +1,6 @@
 package com.test.java;
 
-public class practice3_2 {
+public class Pr3_2 {
 	public static void main(String[] args) {
 		int x = 2;
 		int y = 5;

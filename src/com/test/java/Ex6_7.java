@@ -1,5 +1,7 @@
 package com.test.java;
 
+class Data2 {int x;}
+
 public class Ex6_7 {
 	public static void main(String[] args) {
 		Data2 d = new Data2();
@@ -10,9 +12,9 @@ public class Ex6_7 {
 		System.out.println("main() : x = " + d.x);
 	}
 	
-	static void change(Data2 d) {
-		d.x = 1000;
-		System.out.println("change() : x = " + d.x);
+	static void change(Data2 f) {
+		f.x = 1000;
+		System.out.println("change() : x = " + f.x);
 	}
 
 }

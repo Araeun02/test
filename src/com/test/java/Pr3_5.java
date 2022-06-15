@@ -1,6 +1,6 @@
 package com.test.java;
 
-public class practice3_5 {
+public class Pr3_5 {
 	public static void main(String[] args) {
 		int num = 0;
 		

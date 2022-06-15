@@ -2,6 +2,7 @@ package com.test.java;
 
 class Data_1 { //기본 생성자 추가
 	int value;
+
 }
 
 class Data_2 { // int x 라는 값이 정해져있기에 기본 생성자가 추가되지 않음
@@ -10,6 +11,11 @@ class Data_2 { // int x 라는 값이 정해져있기에 기본 생성자가 추
 	Data_2(int x){
 		value = x;
 	}
+	
+	Data_2() { // 생성자의 기본 형태
+		
+	}
+	
 }
 
 

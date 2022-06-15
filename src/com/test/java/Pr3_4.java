@@ -1,6 +1,6 @@
 package com.test.java;
 
-public class practice3_4 {
+public class Pr3_4 {
 	public static void main(String[] args) {
 		int numofApples = 110;
 		int sizeofBucket = 10;

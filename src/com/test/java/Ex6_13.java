@@ -6,7 +6,7 @@ class Car2 {
 	int door;
 	
 	Car2(){
-		this("white","auto",4);
+		this("white","auto",4); //this는 생성자 내에서 다른 생성자를 호출 할 때
 	}
 	
 	Car2(String color){
