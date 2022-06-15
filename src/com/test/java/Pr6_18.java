@@ -2,6 +2,10 @@ package com.test.java;
 
 public class Pr6_18 {
 	
+	isNumber(boolean){
+		
+	}
+	
 	
 	
 	public static void main(String[] args) {
