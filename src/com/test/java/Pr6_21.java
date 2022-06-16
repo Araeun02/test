@@ -1,6 +1,17 @@
 package com.test.java;
 
 public class Pr6_21 {
+	public static int abs(int value) {
+		if(value>=0) {
+			//value; //value;이 안되는 이유
+			value = value * 1;
+		} else if(value<0) {
+			value = value * -1;
+		}
+		
+	return value;
+			
+	}
 	
 	
 	

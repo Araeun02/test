@@ -8,34 +8,41 @@ class Student {
 	int kor; //국어
 	int eng; //영어
 	int math; //수학
-	int getTotal; //총점
-	int getAverage; //평균
 	//7 ?? 
 	// 설명?
 	
 	Student() {}
 	//public은 어떨때 쓰는거?
-	public Student(String string, int a, int b, int c, int d, int e, int f, int g, int h) {
-		name = string;
-		ban = a;
-		no = b;
-		kor = c;
-		eng = d;
-		math = e;
-		getTotal = f;
-		getAverage = g;
+	public Student(String name, int ban, int no, int kor, int eng, int math) {
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		
+		
 
 	}
-
-		public int getTotal() {
-			//kor+eng+math;
-			return getTotal;
-		} 
 	
-		public int getAverage() {
-			//getTotal/
-			return getAverage;
-		}
+	String info() {
+		
+		String result = name + "," + ban + "," + no + "," + kor + "," + eng + "," + math + "," + getTotal() + "," + getAverage();
+		
+		return result;
+	}
+
+	public int getTotal() {
+		int total = kor + eng + math;
+		return total;
+	} 
+	
+	public float getAverage() {
+		float avg = Math.round((getTotal() / 3f)*10) / 10f;
+		return avg;
+	}
+		
+		
 
 
 }
