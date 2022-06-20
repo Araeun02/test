@@ -10,8 +10,8 @@ public class Ex7_11 {
 	}
 }
 
-class Child3 extends Parent3 implements MyInterface, MyInterface2{
-	public void method1() {
+class Child3 extends Parent3 implements MyInterface, MyInterface2{ // class는 extend(확장하다)로 상속, interface는 implements(구현하다)로 상속
+	public void method1() { 
 		System.out.println("method1() in Child3");
 	}
 }
@@ -23,7 +23,7 @@ class Parent3 {
 }
 
 interface MyInterface {
-	default void method1() {
+	default void method1() { //디폴트 매서드 <=> void method1(); 추상매서드
 		System.out.println("method1() in MyInterface");
 	}
 	
@@ -44,3 +44,4 @@ interface MyInterface2 {
 		System.out.println("staticMethod() in MyInterface2");
 	}
 }
+//인터페이스는 다중상속이 가능, 클래스는 불가능 interface는 class처럼 모든 클래스의 공통조상이 없다

@@ -8,12 +8,12 @@ class Product2 {
 		this.price = price;
 		bonusPoint = (int)(price/10.0);
 	}
-	Product2() {}
+	Product2() {} //생성자
 }
 
 class Tv2 extends Product2 {
-	Tv2() {super(100);}
-	@Override
+	Tv2() {super(100);} //조상클래스의 생성자인 Product2(int price)를 호출
+	@Override //오버라이딩시에는 표시
 	public String toString() {return "Tv";}
 }
 
@@ -56,6 +56,7 @@ class Buyer2 {
 			System.out.println(cart[i].price);
 			sum += cart[i].price;
 			itemList += cart[i] + ",";
+			//itemList += (i==0)?"" + cart[i] : "," + cart[i];
 		}
 		System.out.println("구입하신 물품의 총 금액은 " + sum + "만원입니다.");
 		System.out.println("구입하신 제품은 " + itemList + "입니다.");

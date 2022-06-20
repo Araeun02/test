@@ -9,14 +9,14 @@ public class Ex7_10 {
 	}
 }
 
-abstract class Unit{
+abstract class Unit{ //공통조상 Unit
 	int x, y;
 	abstract void move(int x, int y);
 	void stop() {}
 }
-class Marine0 extends Unit{
-	void move(int x, int y) {
-		System.out.println("Marine[x=" + x + ", y=" + y + "]");
+class Marine0 extends Unit{ //추상 클래스
+	void move(int x, int y) { //추상 매서드
+		System.out.println("Marine[x=" + x + ", y=" + y + "]"); //추상 매서드
 	}
 	void stimpack() {}
 }
@@ -35,3 +35,4 @@ class Dropship extends Unit{
 	void load() {}
 	void unload() {}
 }
+//
