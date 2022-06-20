@@ -10,15 +10,17 @@ class MyTv10 {
 	final int MAX_CHANNEL = 100;
 	final int MIN_CHANNEL = 1;
 	
-	void power() {isPowerOn = !isPowerOn;}
-	
+	public void isPowerOn() {isPowerOn = !isPowerOn;}
+	public void getVolume() {}
+	public void getChannel() {}
+}
 
 public class Pr7_4 {
 	public static void main(String [] args) {
 		MyTv10 t = new MyTv10();
-		t.setChannel(10);
+		t.getChannel(10);
 		System.out.println("CH:" + t.getChannel());
-		t.setVolume(20);
+		t.getVolume(20);
 		System.out.println("VOL:" + t.getVolume());
 	}
 
