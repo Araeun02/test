@@ -6,10 +6,11 @@ import java.awt.event.*;
 class Pr7_9 {
 	public static void main(String [] args) {
 		Frame f = new Frame();
-		f.addWindowListener(new EventHander() {
+		f.addWindowListener(new WindowAdapter() {
+				@Override
 				public void windowClosing(WindowEvent e) {
-					e.getWindow().setVisivle(false);
-					e.getWindow().disopse();
+					e.getWindow().setVisible(false);
+					e.getWindow().dispose();
 					System.exit(0);
 				}
 			}
