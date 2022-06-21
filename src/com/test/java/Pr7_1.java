@@ -26,8 +26,14 @@ class SutdaDeck {
 		}
 	}
 	
-	void pick(int i) {
-		return SutdaCard;
+	void pick(int index) {
+		if(index < 0 || index >= CARD_NUM)
+		return SutdaCard; //반환라는게 retrun?
+	}
+	
+	pick() {
+		int z = (int)(Math.random() % + 1);
+		return 
 	}
 }
 
