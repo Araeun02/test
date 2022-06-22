@@ -19,21 +19,23 @@ class SutdaDeck {
 		int j = 0;
 		SutdaCard tmp;
 		for(int y = 0; y < cards.length; y++) {
-			j = (int)(Math.random() * 10 +1);
+			j = (int)(Math.random() * cards.length +1);
 			tmp = cards[y];
 			cards[y] = cards[j];
 			cards[j] = tmp;	
 		}
 	}
 	
-	void pick(int index) {
+	SutdaCard pick(int index) {
 		if(index < 0 || index >= CARD_NUM)
-		return SutdaCard; //반환라는게 retrun?
+			return null; //반환라는게 retrun?
+		 
+		return cards[index];
 	}
 	
-	pick() {
-		int z = (int)(Math.random() % + 1);
-		return 
+	SutdaCard pick() {
+		int z = (int)(Math.random()*cards.length)+1;
+		return cards[z];
 	}
 }
 
@@ -66,6 +68,8 @@ class Pr7_1 {
 		
 		for(int i = 0; i < deck.cards.length; i++)
 			System.out.print(deck.cards[i] + ",");
+		System.out.println();
+		System.out.println(deck.pick(0));
 	}
 
 }
