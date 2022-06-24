@@ -5,11 +5,11 @@ public class Ex9_15 {
 		int i = new Integer("100").intValue();
 		int i2 = Integer.parseInt("100");
 		Integer i3 = Integer.valueOf("100");
-		int i4 = Integer.parseInt("100",2);
-		int i5 = Integer.parseInt("100",8);
-		int i6 = Integer.parseInt("100",16);
-		int i7 = Integer.parseInt("FF",16);
-//		int i8 = Integer.parseInt("FF");
+		int i4 = Integer.parseInt("100",2); //100을 2진수로 인식 = 4
+		int i5 = Integer.parseInt("100",8); //100을 8진수로 인식 = 64
+		int i6 = Integer.parseInt("100",16); //100을 16진수로 인식 = 256
+		int i7 = Integer.parseInt("FF",16); //FF를 16진수로 인식 = 255
+//		int i8 = Integer.parseInt("FF"); //FF를 10진수로 인식 (빈값이라면 10진수로 인식)하지만 10진수에 FF라는 수는 없으므로 오류
 		
 		int i9 = Integer.valueOf("100",2);
 		int i10 = Integer.valueOf("100",8);

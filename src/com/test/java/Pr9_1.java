@@ -27,11 +27,19 @@ class SutdaCard0 {
 	
 	@Override
 	public boolean equals(Object obj) {	
-		if(obj instanceof SutdaCard0) {
-			return num == num && isKwang == isKwang; //매개변수를 어떻게 부르지?
+		if(!(obj instanceof SutdaCard0))
+			return false;
+		
+		SutdaCard0 c = (SutdaCard0)obj;
+		return this.num == c.num && this.isKwang == c.isKwang; //매개변수를 어떻게 부르지?
+		
+		
+		/*if(obj instanceof SutdaCard0) {
+			SutdaCard0 c = (SutdaCard0)obj;
+			return this.num == c.num && this.isKwang == c.isKwang; //매개변수를 어떻게 부르지?
 		} else {
 			return false;
-		}
+		}*/
 		
 	}
 
