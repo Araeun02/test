@@ -4,17 +4,29 @@ import java.text.*;
 
 class Pr10_3 {
 	static int paycheckCount(Calendar from, Calendar to) {
-		if(from == null || to == null) {
+		if(from == null || to == null) //else if가 안되는 이유
 			return 0;	
-		} else if(from == to && to == 21) { //캘린더나 인트에 알맞는 연산자가 아님? 맞는거같은데 안되는 이유를 모르겠음
+		//if(from == to && to == 21)
+		if(from.equals(to) && from.get(Calendar.DAY_OF_MONTH)==21)
 			return 1;
-		} else if() {//답지는 년도 * 12를 해서 월을 빼는데 그거 말고 다른 방법이 없나?
-			return ;
-		} else if(fromDate.get(Calendar.DATE) <= 21 && toDate.get(Calendar.DATE) >= 21) {
-			++monDiff
-		} else if(fromDate.get(Calendar.DATE) > 21 && toDate.get(Calendar.DATE) > 21) {
-			--monDiff
-		}		
+		
+		int fromYear = from.get(Calendar.YEAR);
+		int fromMon = from.get(Calendar.MONTH);
+		int fromDay = from.get(Calendar.DAY_OF_MONTH);
+		
+		int toYear = to.get(Calendar.YEAR);
+		int toMon = to.get(Calendar.MONTH);
+		int toDay = to.get(Calendar.DAY_OF_MONTH);
+		
+//		int monDiff = ((toDate.get(Calendar.YEAR)*12) + toDate.get(Calendar.MONTH)  - (fromDate.get(Calendar.YEAR* 12 - (fromDate.get(Calendar.YEAR);
+		int monDiff = (toYear * 12 + toMon) - (fromYear * 12 + fromMon);// 왜 그대로 안쓰고 다시 변환해서 하는거?
+		if(monDiff < 0)
+			return 0;
+		if(fromDay <= 21 && toDay >= 21)
+			monDiff++;
+		if(fromDay > 21 && toDay > 21)
+			monDiff--;
+		
 		return monDiff;
 	}
 	
@@ -22,7 +34,7 @@ class Pr10_3 {
 		Date fromDate = from.getTime();
 		Date toDate = to.getTime();
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyy-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		System.out.println(sdf.format(fromDate) + " ~ " + sdf.format(toDate) + ":");
 		
 		System.out.println(paycheckCount(from,to));
@@ -34,7 +46,7 @@ class Pr10_3 {
 		
 		fromCal.set(2020, 0, 1);
 		toCal.set(2020, 0, 1);
-		printResult(fromCal,toCal); //printResult?
+		printResult(fromCal,toCal); 
 		
 		fromCal.set(2020, 0, 21);
 		toCal.set(2020, 0, 21);
