@@ -19,7 +19,7 @@ class Pr11_1 {
 		stack.addAll(tset); //들어간 순서대로 들어가서 쌓아라 즉 밑에서 위로 7, 6, 3, 2 <=> Queue(먼저들어간게 먼저나옴)
 		
 		while(!stack.empty())
-			System.out.println(stack.pop());
+			System.out.print(stack.pop());
 	}
 	//stack은 쌓는거라서 먼저들어간게 마지막에 나옴
 }
