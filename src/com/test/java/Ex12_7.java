@@ -1,5 +1,10 @@
 package com.test.java;
 
-public class Ex12_7 {
+class Parent06 {
+	void parentMethod() { }
+}
 
+class Child06 extends Parent06 {
+	@Override
+	void parentMethod() { }
 }
