@@ -73,7 +73,7 @@ class Ex14_11 {
 		Map<Student3.Level, List<Student3>> stuByLevel = Stream.of(stuArr)
 			.collect(groupingBy(s -> {
 				if(s.getScore() >= 200) return Student3.Level.HIGH;
-				else if(s.getScore() >= 200) return Student3.Level.MID;
+				else if(s.getScore() >= 100) return Student3.Level.MID;
 				else return Student3.Level.LOW;
 			}));
 		
@@ -99,8 +99,8 @@ class Ex14_11 {
 			System.out.printf("[%s] - %d명, ", key, stuCntByLevel.get(key));
 		System.out.println();
 		
-		System.out.printf("%n4. 다중그룹화(학년별, 반별)");
-		Map<Integer, Map<Integer, List<Student3>>> stubyHackAndBan =
+		System.out.printf("%n4. 다중그룹화(학년별, 반별)"); //책이 잘못된거같은데?
+		Map<Integer, Map<Integer, List<Student3>>> stuByHakAndBan =
 			Stream.of(stuArr)
 			.collect(groupingBy(Student3::getHak,
 				groupingBy(Student3::getBan)
@@ -114,7 +114,34 @@ class Ex14_11 {
 			}
 		}
 		
+		System.out.printf("%n5. 다중그룹화 + 통계(학년별, 반별 1등)%n");
+		Map<Integer, Map<Integer, Student3>> topStuByHakAndBan = Stream.of(stuArr)
+			.collect(groupingBy(Student3::getHak,
+				groupingBy(Student3::getBan,
+					collectingAndThen(
+						maxBy(comparingInt(Student3::getScore))
+						, Optional::get
+					)
+				)
+		));
 		
-	}
 
+		for(Map<Integer, Student3> ban : topStuByHakAndBan.values())
+			for(Student3 s : ban.values())
+				System.out.println(s);
+		System.out.printf("%n6. 다중그룹화 + 통계(학년별, 반별 성적그룹)%n");
+		Map<String, Set<Student3.Level>> stuByScoreGroup = Stream.of(stuArr)
+			.collect(groupingBy(s -> s.getHak() + "-" + s.getBan(),
+				mapping(s -> {
+					if(s.getScore() >= 200) return Student3.Level.HIGH;
+					else if(s.getScore() >= 100) return Student3.Level.MID;
+					else return Student3.Level.LOW;
+				}, toSet())
+			));
+		Set<String> keySet2 = stuByScoreGroup.keySet();
+		
+		for(String key : keySet2) {
+			System.out.println("[" + key + "]" + stuByScoreGroup.get(key));
+		}
+	}
 }

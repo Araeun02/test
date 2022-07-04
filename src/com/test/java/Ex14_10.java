@@ -81,10 +81,11 @@ class Ex14_10 {
 		System.out.println("남학생 1등 :" + topScoreBySex.get(true));
 		System.out.println("여학생 1등 :" + topScoreBySex.get(false));
 		
-		Map<Boolean, Student2> topScoreBySex2 = Stream.of(stuArr)
-			.collect(partitioningBy(Student2::isMale, 
-				collectingAndThen( 
-					maxBy(comparingInt(Student2::getScore)))
+		Map<Boolean, Student2> topScoreSex2 = Stream.of(stuArr)
+			.collect(partitioningBy(Student2::isMale,
+				collectiongAndThen(
+					maxBy(comparingInt(Student2::getScore)), Optional::get
+				)
 			));
 		
 		System.out.println("남학생 1등 :" + topScoreBySex.get(true));
