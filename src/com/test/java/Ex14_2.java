@@ -3,7 +3,7 @@ import java.util.function.*;
 import java.util.*;
 
 class Ex14_2 {
-	public static void main(String [] args) { // 함수쓸때 i를 쓰는 이유
+	public static void main(String [] args) { // 함수쓸때 i를 쓰는 이유, 아무변수나 상관없나?
 		Supplier<Integer> s = () -> (int)(Math.random() * 100) + 1; // s는 1에서 100까지 중 랜덤
 		Consumer<Integer> c = i -> System.out.print(i+",");// c = i,
 		Predicate<Integer> p = i -> i%2==0; 
@@ -19,7 +19,7 @@ class Ex14_2 {
 	}
 	
 	static<T> List<T> doSomthing(Function<T, T> f, List<T> list){
-		List<T> newList = new ArrayList<T>(list.size());
+		List<T> newList = new ArrayList<T>(list.size()); //list.size? = list.length?
 		
 		for(T i : list) {
 			newList.add(f.apply(i));//apply?
@@ -32,8 +32,8 @@ class Ex14_2 {
 	static <T> void printEvenNum(Predicate<T> p, Consumer<T> c, List<T> list) {
 		System.out.print("[");
 		for(T i : list) {
-			if(p.test(i))
-				c.accept(i);
+			if(p.test(i)) // test?
+				c.accept(i); // accept?
 		}
 		
 		System.out.println("]");

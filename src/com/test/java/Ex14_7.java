@@ -9,11 +9,11 @@ class Ex14_7 {
 			new String[] {"ABC", "GHI", "JKL"}
 		);
 		
-		Stream<String> strStrm = strArrStrm.flatMap(Arrays::stream);
+		Stream<String> strStrm = strArrStrm.flatMap(Arrays::stream); //strm = Stream?
 		
-		strStrm.map(String::toLowerCase)
-			.distinct()
-			.sorted()
+		strStrm.map(String::toLowerCase)//소문자로
+			.distinct()//중복삭제
+			.sorted()//순서정렬
 			.forEach(System.out::println);
 		System.out.println();
 		
@@ -23,7 +23,7 @@ class Ex14_7 {
 		};
 		
 		Stream<String> lineStream = Arrays.stream(lineArr);
-		lineStream.flatMap(line -> Stream.of(line.split(" +")))
+		lineStream.flatMap(line -> Stream.of(line.split(" +")))//flatMap? split?
 			.map(String::toLowerCase)
 			.distinct()
 			.sorted()

@@ -40,6 +40,6 @@ class Student05 implements Comparable<Student05> {
 	int getTotalScore() {return totalScore;}
 	
 	public int compareTo(Student05 s) {
-		return s.totalScore - this.totalScore;
+		return s.totalScore - this.totalScore; //보통은 this - s로 오름차순을 쓰지면 여기에선 반대로 s - this를 적용하여 내림차순을 했다
 	}
 }

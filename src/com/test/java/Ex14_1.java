@@ -25,7 +25,7 @@ class Ex14_1 {
 		
 		MyFunction f3 = getMyFunction();
 		
-		f1.run();
+		f1.run(); //이건 뭐지?
 		f2.run();
 		f3.run();
 		
