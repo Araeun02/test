@@ -25,4 +25,3 @@ class Ex14_6 {
 	}
 
 }
-//array랑 arraylist를 따로 쓰는 이유

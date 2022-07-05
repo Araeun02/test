@@ -25,8 +25,8 @@ class Ex14_9 {
 		int count = intStream1.reduce(0,  (a,b) -> a + 1);
 		int sum = intStream2.reduce(0, (a,b) -> a+b);
 		
-		OptionalInt max = intStream3.reduce(Integer::max); //reduce?
-		OptionalInt min = intStream4.reduce(Integer::min);
+		OptionalInt max = intStream3.reduce(Integer::max); //reduce?	(a,b) -> Integer.max(a,b)
+		OptionalInt min = intStream4.reduce(Integer::min);	//			(a,b) -> Integer.min(a,b)
 		System.out.println("count=" + count);
 		System.out.println("sum=" + sum);
 		System.out.println("max=" + max.getAsInt());
